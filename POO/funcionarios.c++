@@ -20,6 +20,7 @@ class Funcionario
       float get_salario() { return salario; };
 
       void print(int indice);
+      
   } ;
  
 void Funcionario::print(int indice)
@@ -34,7 +35,7 @@ int main()
   {
     string nome, cargo;
     int idade, numFunc;
-    float salario;
+    float salario, custototal;
 
     Funcionario funcionarios[10];
     
@@ -57,6 +58,8 @@ int main()
         cout << "Digite o salario do funcionario " << numFunc << ": ";
         cin >> salario;
         funcionarios[i].set_salario(salario);
+
+              custototal =+ salario;
     }
 
     for(int i = 0; i < 10; i++) {
@@ -66,8 +69,7 @@ int main()
       cout << "A idade do funcionário " << numFunc << " informado foi: " << funcionarios[i].get_idade() << endl;
       cout << "O cargo do funcionário " << numFunc << " informado foi: " << funcionarios[i].get_cargo() << endl;
       cout << "O salario do funcionário " << numFunc << " informado foi: " << funcionarios[i].get_salario() << endl;
-      
-    
     }
 
+    cout << "O custo total com os sáliros é: " << custototal << endl;
   }
